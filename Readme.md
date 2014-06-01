@@ -87,7 +87,7 @@ opt = {
 ```javascript
 /*
  * An object/hash that holds cached objects.
- * every cache entry is in the form:
+ * Every cache entry is an object/hash:
  *
  * 'encoded_key' : {
  *      age : Number
@@ -120,13 +120,12 @@ Camphora.options
  * respectively the number of keys/entries and the total size
  * in bytes of values ( if any esist ).
  */
- */
 Camphora#update = function ( String key | Object key ) : Array
 
 /*
  * Delete an entry. It returns true if entry exists, false otherwise.
  */
-Camphora#delete = function ( String key | Object key ) : Boolean
+Camphora#evict = function ( String key | Object key ) : Boolean
 
 /*
  * Clear the cache. It returns the current number of entries evicted.
