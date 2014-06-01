@@ -86,7 +86,7 @@ opt = {
 
 ```javascript
 /*
- * An object/hash that holds cached objects
+ * An object/hash that holds cached objects.
  */
 Camphora.cache
 
@@ -103,7 +103,11 @@ Camphora.options
 
 ```javascript
 /*
- * create or update a cache entry.
+ * Create or update a cache entry.
+ * It returns an Array like [ Number length, Number bytes ]
+ * respectively the number of keys/entries and the total size
+ * in bytes of values ( if any esist ).
+ */
  */
 Camphora#update = function ( String key | Object key ) : Array
 
