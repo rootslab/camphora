@@ -103,7 +103,7 @@ opt = {
 Camphora.cache
 
 /*
- * An object/hash that holds current options
+ * An object/hash that holds current options.
  */
 Camphora.options
 
@@ -133,7 +133,7 @@ Camphora#evict = function ( String key | Object key ) : Boolean
 Camphora#clear = function () : Number
 
 /*
- * Peek a key in the cache. 
+ * Peek a key in the cache, without affecting age properties.
  * It returns the Object entry, or undefined if it doesn't exist.
  */
 Camphora#peek = function ( String key | Object key ) : Object
@@ -147,7 +147,7 @@ Camphora#peek = function ( String key | Object key ) : Object
 Camphora#size = function () : Array
 
 /*
- * Get all the keys in the cache
+ * Get all the keys in the cache.
  */
 Camphora#keys = function () : Array
 ```
