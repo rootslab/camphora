@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
 
-> _**Camphora**_, a tiny module for __NFU__ (Not Frequently Used) caching, with linear Aging.
+> _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __caching__, with linear Aging.
 
 ###Install
 
