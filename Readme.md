@@ -40,7 +40,7 @@ new Camphora( [ Object opt ] )
 
 ####Options
 
-> Default option are listed.
+> Default options are listed.
 
 ```javascript
 opt = {
@@ -87,6 +87,18 @@ opt = {
 ```javascript
 /*
  * An object/hash that holds cached objects.
+ * every cache entry is in the form:
+ *
+ * 'encoded_key' : {
+ *      age : Number
+ *      , value : String
+ *      , bytes : Number
+ *  }
+ *
+ * - 'encoded_key' is the string result of the key encoding.
+ * - 'age' indicates the current 'freshness' of the key.
+ * - 'value' contains the actual (JSON.stringify) value of the key.
+ * - 'bytes' contains the current size in bytes of the cached key.
  */
 Camphora.cache
 
