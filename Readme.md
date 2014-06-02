@@ -1,6 +1,7 @@
 ###Camphora
 [![build status](https://secure.travis-ci.org/rootslab/camphora.png?branch=master)](http://travis-ci.org/rootslab/camphora) 
 [![NPM version](https://badge.fury.io/js/camphora.png)](http://badge.fury.io/js/camphora)
+[![build status](https://david-dm.org/rootslab/camphora.png)](https://david-dm.org/rootslab/camphora)
 
 [![NPM](https://nodei.co/npm/camphora.png?downloads=true&stars=true)](https://nodei.co/npm/camphora/)
 
