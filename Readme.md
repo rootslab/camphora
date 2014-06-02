@@ -45,6 +45,15 @@ new Camphora( [ Object opt ] )
 ```javascript
 opt = {
     /*
+     * Set the max number of entries in the cache.
+     * When this value will be reached, an element with the highest "age"
+     * among others, will be evicted from the cache.
+     *
+     * NOTE: 'capacity' is not related to the cache size in bytes.
+     */
+    , capacity : 1024
+
+    /*
      * Choose an algorithm to encode objects into keys. 
      *
      * NOTE: Algorithm is dependent on the available algorithms
@@ -55,6 +64,7 @@ opt = {
      * See http://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm.
      */
     algorithm : 'sha1'
+
     /*
      * Choose a particular encoding for the digest/key. 
      *
@@ -63,6 +73,7 @@ opt = {
      * See http://nodejs.org/api/crypto.html#crypto_hash_digest_encoding
      */
     , output_encoding : 'hex'
+
     /*
      * Change how the input encoding will be intepreted.
      *
@@ -73,19 +84,6 @@ opt = {
      * See http://nodejs.org/api/crypto.html#crypto_hash_update_data_input_encoding
      */
     , input_encoding : 'binary'
-    /*
-     * Set the max number of entries in the cache.
-     * When this value will be reached, an element with the highest "age"
-     * among others, will be evicted from the cache.
-     *
-     * NOTE: 'capacity' is not related to the cache size in bytes.
-     */
-    , capacity : 1024
-    /*
-     * In some particular situations, you need to hold in the cache only
-     * the encoded keys, not their real values, use "false" in these cases.
-     */
-    , values : true
 }
 ```
 
@@ -98,14 +96,16 @@ opt = {
  *
  * 'encoded_key' : {
  *      age : Number
- *      , value : String
+ *      , key : String
+ *      , data : Buffer | String
  *      , bytes : Number
  *  }
  *
  * - 'encoded_key' is the string result of the key encoding.
  * - 'age' indicates the current 'freshness' of the key.
- * - 'value' contains the actual (JSON.stringify) value of the key.
- * - 'bytes' contains the current size in bytes of the cached key.
+ * - 'key' contains the actual (JSON.stringify) value of the key.
+ * - 'data' contains the current payload associated with the key.
+ * - 'bytes' indicates the current size in bytes of data.
  */
 Camphora.cache
 
@@ -118,44 +118,60 @@ Camphora.options
 
 ###Methods
 
-> Arguments within [ ] are optional.
+> Arguments within [ ] are optional, '|' indicates multiple type for an argument.
 
 ```javascript
-/*
- * Create or update an entry in the cache.
- * 
- * NOTE: 'key' argument will be converted to a String
- * with JSON.stringify().
- *
- * Example:
- *
- * key = { prop0 : 'value0' }
- *
- * executing Camphora#update( key ) returns an object/hash:
- * 
- * {
- *  key: '{"prop0":"value0"}'
- *  , digest: 'cc41f3c16f32cec48945602edb342c7c96784b6f'
- *  , entries: 4
- *  , bytes: 72
- * }
- *
- */
-Camphora#update = function ( Object key ) : Object
 
 /*
- * Evict an key/object from cache, passing the object itself.
+ * Read or Create an object/key entry into the cache, without payload data.
+ *
+ * NOTE: 'key' argument will be converted with JSON.stringify().
+ *
+ * NOTE: It affects 'age' properties in the cache.
+ */
+Camphora#read = function ( Object key ) : Object
+
+/*
+ * Update or Create an object/key entry into the cache, optionally specifying
+ * additional payload data.
+ * 
+ * NOTE: 'key' argument will be converted with JSON.stringify().
+ *
+ * NOTE: It affects 'age' properties in the cache.
+ */
+Camphora#update = function ( Object key [, Buffer payload | String payload ] ) : Object
+
+/*
+ * Evict a key/object entry from the cache.
  * It returns true if entry exists, false otherwise.
  *
- * NOTE: 'key' argument will be converted to a String with JSON.stringify().
+ * NOTE: 'key' argument will be converted with JSON.stringify().
  */
 Camphora#evict = function ( Object key ) : Boolean
 
 /*
- * Delete an entry with its actual encoded name.
+ * Peek an object/key entry from the cache.
+ * It returns the Object entry, or undefined if it doesn't exist.
+ *
+ * NOTE: It doesn't affect 'age' properties in the cache.
+ *
+ * NOTE: 'key' argument will be converted with JSON.stringify().
+ */
+Camphora#peek = function ( Object key ) : Object
+
+/*
+ * Get an object/key entry from the cache, using its actual encoded value.
+ * It returns the Object entry, or undefined if it doesn't exist.
+ *
+ * NOTE: It doesn't affect 'age' properties in the cache.
+ */
+Camphora#get = function ( String encoded_key ) : Object
+
+/*
+ * Delete a key/object entry from the cache, using its actual encoded value.
  * It returns true if entry exists, false otherwise.
  */
-Camphora#delete = function ( String key ) : Boolean
+Camphora#delete = function ( String encoded_key ) : Boolean
 
 /*
  * Clear the cache.
@@ -164,34 +180,14 @@ Camphora#delete = function ( String key ) : Boolean
 Camphora#clear = function () : Number
 
 /*
- * Peek a key(object) in the cache, passing the object itself.
- * It returns the Object entry, or undefined if it doesn't exist.
- *
- * NOTE: It doesn't affect 'age' properties in the cache.
- *
- * NOTE: 'key' argument will be converted to a String
- * with JSON.stringify().
- */
-Camphora#peek = function ( Object key ) : Object
-
-/*
- * Get a key in the cache with its actual encoded name.
- * It returns the Object entry, or undefined if it doesn't exist.
- *
- * NOTE: It doesn't affect 'age' properties in the cache.
- */
-Camphora#get = function ( String key ) : Object
-
-/*
  * Get the current cache size.
- * It returns an Array like [ Number cache_length, Number cache_bytes ],
- * respectively the number of keys/entries and the total size in bytes
- * of values ( if any esist ).
+ * It returns an Array:
+ * [ Number total_number_of_entries, Number total_bytes_of_payload_data ]
  */
 Camphora#size = function () : Array
 
 /*
- * Get all the keys in the cache.
+ * Get all the ( encoded ) keys in the cache.
  */
 Camphora#keys = function () : Array
 ```
