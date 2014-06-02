@@ -63,7 +63,7 @@ opt = {
      * will display the available digest algorithms.
      * See http://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm.
      */
-    algorithm : 'sha1'
+    , algorithm : 'sha1'
 
     /*
      * Choose a particular encoding for the digest/key. 
