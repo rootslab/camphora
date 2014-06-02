@@ -45,7 +45,9 @@ new Camphora( [ Object opt ] )
 ```javascript
 opt = {
     /*
-     * algorithm is dependent on the available algorithms
+     * Choose an algorithm to encode objects into keys. 
+     *
+     * NOTE: Algorithm is dependent on the available algorithms
      * supported by the version of OpenSSL on the platform.
      * Examples are 'sha1', 'md5', 'sha256', 'sha512', etc.
      * On recent releases, openssl list-message-digest-algorithms
@@ -54,24 +56,29 @@ opt = {
      */
     algorithm : 'sha1'
     /*
-     * The encoding can be 'hex', 'binary' or 'base64'.
+     * Choose a particular encoding for the digest/key. 
+     *
+     * NOTE: The encoding can be 'hex', 'binary' or 'base64'.
      * If no encoding is provided, then a buffer is returned.
      * See http://nodejs.org/api/crypto.html#crypto_hash_digest_encoding
      */
     , output_encoding : 'hex'
     /*
-     * set the encoding of the given input, it can be 'utf8', 'ascii' or 
-     * 'binary'. If no encoding is provided and the input is a string, an
-     * encoding of 'binary' is enforced.
+     * Change how the input encoding will be intepreted.
+     *
+     * NOTE: set the encoding of the given input, it can be 'utf8', 'ascii'
+     * or 'binary'. If no encoding is provided and the input is a string,
+     * an encoding of 'binary' is enforced.
      * If data is a Buffer then input_encoding is ignored.
      * See http://nodejs.org/api/crypto.html#crypto_hash_update_data_input_encoding
      */
     , input_encoding : 'binary'
     /*
-     * Set the max value for entries in the cache.
-     * When this value will be reached, an element with the highest
-     * "age" among others, will be evicted from the cache.
+     * Set the max number of entries in the cache.
+     * When this value will be reached, an element with the highest "age"
+     * among others, will be evicted from the cache.
      *
+     * NOTE: 'capacity' is not related to the cache size in bytes.
      */
     , capacity : 1024
     /*
@@ -111,32 +118,71 @@ Camphora.options
 
 ###Methods
 
-> Arguments within [ ] are optional, '|' indicates multiple type for an argument.
+> Arguments within [ ] are optional.
 
 ```javascript
 /*
- * Create or update a cache entry.
- * It returns an Array like [ Number length, Number bytes ]
- * respectively the number of keys/entries and the total size
- * in bytes of values ( if any esist ).
+ * Create or update an entry in the cache.
+ * 
+ * NOTE: 'key' argument will be converted to a String
+ * with JSON.stringify().
+ *
+ * Example:
+ *
+ * key = { prop0 : 'value0' }
+ *
+ * executing Camphora#update( key ) returns an object/hash:
+ * 
+ * {
+ *  key: '{"prop0":"value0"}'
+ *  , digest: 'cc41f3c16f32cec48945602edb342c7c96784b6f'
+ *  , entries: 4
+ *  , bytes: 72
+ * }
+ *
  */
-Camphora#update = function ( String key | Object key ) : Array
+Camphora#update = function ( Object key ) : Object
 
 /*
- * Delete an entry. It returns true if entry exists, false otherwise.
+ * Evict an key/object from cache, passing the object
+ * itself.
+ * It returns true if entry exists, false otherwise.
+ *
+ * NOTE: 'key' argument will be converted to a String
+ * with JSON.stringify().
  */
-Camphora#evict = function ( String key | Object key ) : Boolean
+Camphora#evict = function ( Object key ) : Boolean
 
 /*
- * Clear the cache. It returns the current number of entries evicted.
+ * Delete an entry with its actual encoded name.
+ * It returns true if entry exists, false otherwise.
+ */
+Camphora#delete = function ( String key ) : Boolean
+
+/*
+ * Clear the cache.
+ * It returns the current number of entries evicted.
  */
 Camphora#clear = function () : Number
 
 /*
- * Peek a key in the cache, without affecting age properties.
+ * Peek a key(object) in the cache, passing the object itself,
  * It returns the Object entry, or undefined if it doesn't exist.
+ *
+ * NOTE: It doesn't affect 'age' properties in the cache.
+ *
+ * NOTE: 'key' argument will be converted to a String
+ * with JSON.stringify().
  */
-Camphora#peek = function ( String key | Object key ) : Object
+Camphora#peek = function ( Object key ) : Object
+
+/*
+ * Get a key in the cache with its actual encoded name.
+ * It returns the Object entry, or undefined if it doesn't exist.
+ *
+ * NOTE: It doesn't affect 'age' properties in the cache.
+ */
+Camphora#get = function ( String key ) : Object
 
 /*
  * Get the current cache size.
