@@ -144,12 +144,10 @@ Camphora.options
 Camphora#update = function ( Object key ) : Object
 
 /*
- * Evict an key/object from cache, passing the object
- * itself.
+ * Evict an key/object from cache, passing the object itself.
  * It returns true if entry exists, false otherwise.
  *
- * NOTE: 'key' argument will be converted to a String
- * with JSON.stringify().
+ * NOTE: 'key' argument will be converted to a String with JSON.stringify().
  */
 Camphora#evict = function ( Object key ) : Boolean
 
@@ -166,7 +164,7 @@ Camphora#delete = function ( String key ) : Boolean
 Camphora#clear = function () : Number
 
 /*
- * Peek a key(object) in the cache, passing the object itself,
+ * Peek a key(object) in the cache, passing the object itself.
  * It returns the Object entry, or undefined if it doesn't exist.
  *
  * NOTE: It doesn't affect 'age' properties in the cache.
@@ -186,9 +184,9 @@ Camphora#get = function ( String key ) : Object
 
 /*
  * Get the current cache size.
- * It returns an Array like [ Number length, Number bytes ]
- * respectively the number of keys/entries and the total size
- * in bytes of values ( if any esist ).
+ * It returns an Array like [ Number cache_length, Number cache_bytes ],
+ * respectively the number of keys/entries and the total size in bytes
+ * of values ( if any esist ).
  */
 Camphora#size = function () : Array
 
