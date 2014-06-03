@@ -95,7 +95,7 @@ opt = {
  * An object/hash that holds cached objects.
  * Every cache entry is an object/hash:
  *
- * 'encoded_key' : {
+ * 'digest' : {
  *      age : Number
  *      , key : String
  *      , digest : String
@@ -103,10 +103,9 @@ opt = {
  *      , bytes : Number
  *  }
  *
- * - 'encoded_key' is the string result of the key encoding.
+ * - 'digest' is the string result of the key encoding.
  * - 'age' indicates the current 'freshness' of the key.
  * - 'key' contains the actual (JSON.stringify) value of the key.
- * - 'digest' contains the encoded value of the key.
  * - 'data' contains the current payload associated with the key.
  * - 'bytes' indicates the current size in bytes of data.
  */
