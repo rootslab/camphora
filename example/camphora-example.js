@@ -1,8 +1,8 @@
 var log = console.log
-	, util = require( 'util' )
+    , util = require( 'util' )
     , Camphora = require( '../' )
     , cache = Camphora( {
-    	algorithm : 'sha1'
+        algorithm : 'sha1'
         , input_encoding : 'binary'
         , output_encoding : 'hex'
         , capacity : 4

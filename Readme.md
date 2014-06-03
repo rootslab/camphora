@@ -127,7 +127,16 @@ Camphora.options
 ```javascript
 
 /*
+ * Load a file entry into the cache.
+ * It returns the new or updated object entry.
+ * Default 'opt' is { encoding : null, flag : 'r' }.
+ * See http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+ */
+Camphora#load = function ( String file_path [, Object opt [, Function cback ] ] ) : Object
+
+/*
  * Read or Create an object/key entry into the cache, without payload data.
+ * It returns the new or updated object entry. 
  *
  * NOTE: 'key' argument will be converted with JSON.stringify().
  *
@@ -138,7 +147,8 @@ Camphora#read = function ( Object key ) : Object
 /*
  * Update or Create an object/key entry into the cache, optionally specifying
  * additional payload data.
- * 
+ * It returns the new or updated object entry. 
+ *
  * NOTE: 'key' argument will be converted with JSON.stringify().
  *
  * NOTE: It affects 'age' properties in the cache.
