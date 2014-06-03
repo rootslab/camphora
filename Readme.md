@@ -95,18 +95,20 @@ opt = {
  * An object/hash that holds cached objects.
  * Every cache entry is an object/hash:
  *
- * 'digest' : {
+ * 'kdigest' : {
  *      age : Number
  *      , key : String
- *      , digest : String
- *      , data : Buffer | String
+ *      , kdigest : String
+ *      , data : Buffer | String | null
+ *      , ddigest : String | null
  *      , bytes : Number
  *  }
  *
- * - 'digest' is the string result of the key encoding.
  * - 'age' indicates the current 'freshness' of the key.
  * - 'key' contains the actual (JSON.stringify) value of the key.
+ * - 'kdigest' is the string result of the key encoding.
  * - 'data' contains the current payload associated with the key.
+ * - 'ddigest' is the string result of the payload data encoding.
  * - 'bytes' indicates the current size in bytes of data.
  */
 Camphora.cache
