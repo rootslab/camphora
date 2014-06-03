@@ -194,6 +194,12 @@ Camphora#delete = function ( String encoded_key ) : Boolean
 Camphora#clear = function () : Number
 
 /*
+ * Reset age properties for all entries in the cache.
+ * It returns the current number of entries updated.
+ */
+Camphora#reset = function () : Number
+
+/*
  * Get the current cache size.
  * It returns an Array:
  * [ Number total_number_of_entries, Number total_bytes_of_payload_data ]

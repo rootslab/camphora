@@ -31,3 +31,7 @@ log( '- peek "%j":', entry0, util.inspect( cache.peek( entry0 ), false, 2, true 
 log( '- delete "%j":', entry0, cache.evict( entry0 ) );
 
 log( ' current cache:', util.inspect( cache, false, 2, true ) );
+
+
+log( '- reset age properties for %d entries.', cache.reset() );
+log( util.inspect( cache, false, 2, true ) );
