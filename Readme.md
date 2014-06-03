@@ -102,6 +102,7 @@ opt = {
  *      , data : Buffer | String | null
  *      , ddigest : String | null
  *      , bytes : Number
+ *      , updateAt : Number
  *  }
  *
  * - 'age' indicates the current 'freshness' of the key.
@@ -110,6 +111,7 @@ opt = {
  * - 'data' contains the current payload associated with the key.
  * - 'ddigest' is the string result of the payload data encoding.
  * - 'bytes' indicates the current size in bytes of data.
+ * - 'updatedAt' holds the last access timestamp.
  */
 Camphora.cache
 
@@ -129,7 +131,15 @@ Camphora.options
 /*
  * Load a file entry into the cache.
  * It returns the new or updated object entry.
- * Default 'opt' is { encoding : null, flag : 'r' }.
+ * Default 'opt' is :
+ *
+ * {
+ *  encoding : null
+ *  , flag : 'r'
+ *  // custom option to save payload data.
+ *  , payload : true
+ * }
+ *
  * See http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
  */
 Camphora#load = function ( String file_path [, Object opt [, Function cback ] ] ) : Object
