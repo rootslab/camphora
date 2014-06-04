@@ -7,7 +7,7 @@
 
 [![NPM](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
 
-> _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __in-memory caching__, with linear Aging.
+> _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __in-memory caching__, with linear _Aging_.
 
 ###Install
 
@@ -127,7 +127,6 @@ Camphora.options
 > Arguments within [ ] are optional, '|' indicates multiple type for an argument.
 
 ```javascript
-
 /*
  * Load a file entry into the cache.
  * It returns the new or updated object entry.
@@ -136,7 +135,7 @@ Camphora.options
  * {
  *  encoding : null
  *  , flag : 'r'
- *  // custom option to save payload data.
+ *  // custom option to cache data loaded from file.
  *  , payload : true
  * }
  *
