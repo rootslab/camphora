@@ -134,15 +134,17 @@ Camphora.options
  */
  file_load_opt = {
      /*
-      * For default #load method saves the file data
-      * and its digest in the cache.
-      */ 
+      * For default, #load method saves the file data
+      * and its resulting digest into the cache.
+      * If it set to false, only data digest will be stored.
+      */
       payload : true
 
      /*
-      * For default #load method uses the entire file
-      * path to generate the digest, if it is set to
-      * true, only basename will be used ( last portion
+      * For default, #load method uses the entire file path to generate
+      * the digest key ( used to store/retrieve this file entry into the
+      * cache ).
+      * If it is set to true, only basename will be used ( last portion
       * of the path ).
       */
       , basename : false
