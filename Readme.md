@@ -130,18 +130,32 @@ Camphora.options
 /*
  * Load a file entry into the cache.
  * It returns the new or updated object entry.
- * Default 'opt' is :
- *
+ * Default 'file_load_opt' is :
  * {
- *  encoding : null
+ *  /*
+ *   * For default #load method saves the file data
+ *   * and its digest in the cache.
+ *   */
+ *  payload : true
+ *
+ *  /* 
+ *   * For default #load method uses the entire file
+ *   * path to generate the digest, if it is set to
+ *   * true, only basename will be used ( last portion
+ *   * of the path ).
+ *   */
+ *  , basename : false
+ *
+ *  /*
+ *   * fs.readFile default options
+ *   */
+ *  , encoding : null
  *  , flag : 'r'
- *  // custom option to cache data loaded from file.
- *  , payload : true
  * }
  *
  * See http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
  */
-Camphora#load = function ( String file_path [, Object opt [, Function cback ] ] ) : Object
+Camphora#load = function ( String file_path [, Object file_load_opt [, Function cback ] ] ) : Object
 
 /*
  * Read or Create an object/key entry into the cache, without payload data.
