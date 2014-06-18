@@ -133,27 +133,26 @@ Camphora.options
  * Default options are:
  */
  file_load_opt = {
- /*
-  * For default #load method saves the file data
-  * and its digest in the cache.
-  */ 
-  payload : true
- 
- /*
-  * For default #load method uses the entire file
-  * path to generate the digest, if it is set to
-  * true, only basename will be used ( last portion
-  * of the path ).
-  *
-  */
-  , basename : false
- 
- /*
-  * fs.readFile default options
-  * See http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
-  */
-  , encoding : null
-  , flag : 'r'
+     /*
+      * For default #load method saves the file data
+      * and its digest in the cache.
+      */ 
+      payload : true
+
+     /*
+      * For default #load method uses the entire file
+      * path to generate the digest, if it is set to
+      * true, only basename will be used ( last portion
+      * of the path ).
+      */
+      , basename : false
+
+     /*
+      * fs.readFile default options
+      * See http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+      */
+      , encoding : null
+      , flag : 'r'
  }
 
 Camphora#load = function ( String file_path [, Object file_load_opt [, Function cback ] ] ) : Object
