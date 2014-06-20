@@ -9,9 +9,12 @@
         }
         log( '- new entry is:\n', util.inspect( data, false, 2, true ), '\n' );
     }
-    , fpath = './index.js'
+    , fname = 'index.js'
+    , fpath = './' + fname
     ;
 
 log( '\n- load "%s" file into the cache.', fpath );
 
- cache.load( fpath, null, cback );
+ cache.load( fname, {
+    filepath : './'
+}, cback );
