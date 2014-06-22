@@ -16,7 +16,7 @@ $ npm install camphora [-g]
 // clone repo
 $ git clone git@github.com:rootslab/camphora.git
 ```
-> __require__ 
+> __require__:
 
 ```javascript
 var Camphora = require( 'camphora' );
@@ -85,6 +85,16 @@ opt = {
      * See http://nodejs.org/api/crypto.html#crypto_hash_update_data_input_encoding
      */
     , input_encoding : 'binary'
+
+    /*
+     * For default, cache keys are encrypted with the same algorithm
+     * used for data.
+     * Set it to false to use unencrypted/cleartext key names.
+     * 
+     * NOTE: if encryption is disabled, methods like #get and #peek will accept
+     * the same unencrypted argument for the key.
+     */
+     , encrypt_keys : true
 }
 ```
 
@@ -101,7 +111,7 @@ opt = {
  *      , kdigest : String
  *      , data : Buffer | String | null
  *      , ddigest : String | null
- *      , bytes : Number
+ *      , dbytes : Number
  *      , updateAt : Number
  *  }
  *
@@ -110,7 +120,7 @@ opt = {
  * - 'kdigest' is the string result of the key encoding.
  * - 'data' contains the current payload associated with the key.
  * - 'ddigest' is the string result of the payload data encoding.
- * - 'bytes' indicates the current size in bytes of data.
+ * - 'dbytes' indicates the current size in bytes of data.
  * - 'updatedAt' holds the last access timestamp.
  */
 Camphora.cache

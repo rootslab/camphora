@@ -6,18 +6,17 @@ var log = console.log
         , input_encoding : 'binary'
         , output_encoding : 'hex'
         , capacity : 4
-        , values : true
     } )
     , size = -1
     , entry0 = { prop0 : 'value0' }
     ;
 
-cache.update( entry0 );
-cache.update( { prop1 : 'value1' } );
-cache.update( entry0 );
-cache.update( { prop2: 'value2' } );
-cache.update( { prop3: 'value3' } );
-log( cache.update( entry0 ) );
+cache.read( entry0 );
+cache.read( { prop1 : 'value1' } );
+cache.read( entry0 );
+cache.read( { prop2: 'value2' } );
+cache.read( { prop3: 'value3' } );
+log( cache.read( entry0 ) );
 
 log( '- current Camphora istance:\n', util.inspect( cache, false, 2, true ) );
 
