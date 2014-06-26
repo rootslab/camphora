@@ -14,4 +14,4 @@
 
 log( '\n- load "%s" file into the cache.', fpath );
 
- cache.load( fpath, null, cback );
+cache.load( fpath, null, cback );

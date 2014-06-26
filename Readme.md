@@ -166,7 +166,7 @@ Camphora.options
       , flag : 'r'
  }
 
-Camphora#load = function ( String filename [, Object file_load_opt [, Function cback ] ] ) : Object
+Camphora#load = function ( String filename [, Object file_load_opt [, Function cback ] ] ) : undefined
 
 /*
  * Read or Create an object/key entry into the cache, without payload data.

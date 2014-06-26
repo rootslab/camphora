@@ -15,6 +15,6 @@
 
 log( '\n- load "%s" file into the cache.', fpath );
 
- cache.load( fname, {
+cache.load( fname, {
     filepath : './'
 }, cback );
