@@ -6,16 +6,8 @@
 
 var log = console.log
     , assert = require( 'assert' )
-    , crypto = require( 'crypto' )
     , fs = require( 'fs' )
     , util = require( 'util' )
-    , Bolgia = require( 'bolgia' )
-    , improve = Bolgia.improve
-    , ooo = Bolgia.circles
-    , ostr = ooo.str
-    , toString = Bolgia.toString
-    , createHash = crypto.createHash
-    , stringify = JSON.stringify
     , Camphora = require( '../' )
     // default config
     , camphora_opt = {
