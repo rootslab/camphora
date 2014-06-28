@@ -9,6 +9,15 @@
 
 > _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __in-memory caching__, with linear _Aging_.
 
+> In this custom implementation:
+ - when a new entry is __read or updated__ for the __first time__ its __age__ counter is set to __-1__.
+ - if the entry __still exists__, its __age__ will be __decremented by -2__.
+ - when a entry ( exisiting or not ) was read or updated, each __age__ counter for the __other entries__,
+   will be __incremented by 1__.
+ - when the __max capacity__ is reached, the entry with the __highest age__ value will be evicted.
+ - when two or more entries have the __same highest age__ value, the entry with the __oldest updateAt__
+   value will be chosen for eviction, as for the __LRU__ algorithm.
+
 ###Install
 
 ```bash
