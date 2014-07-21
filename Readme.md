@@ -1,11 +1,19 @@
 ###Camphora
-[![build status](https://secure.travis-ci.org/rootslab/camphora.png?branch=master)](http://travis-ci.org/rootslab/camphora) 
-[![NPM version](https://badge.fury.io/js/camphora.png)](http://badge.fury.io/js/camphora)
-[![build status](https://david-dm.org/rootslab/camphora.png)](https://david-dm.org/rootslab/camphora)
 
-[![NPM](https://nodei.co/npm/camphora.png?downloads=true&stars=true)](https://nodei.co/npm/camphora/)
+[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/camphora#mit-license)
 
-[![NPM](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
+[![NPM VERSION](http://img.shields.io/npm/v/camphora.svg)](https://www.npmjs.org/package/camphora)
+[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg)](http://travis-ci.org/rootslab/camphora)
+[![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora)
+
+[![NPM GRAPH1](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
+
+[![GITHUB tag](http://img.shields.io/github/tag/rootslab/camphora.svg)](https://github.com/rootslab/camphora/tags)
+[![ISSUES](http://img.shields.io/github/issues/rootslab/camphora.svg)](https://github.com/rootslab/camphora/issues)
+[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
+[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg)](http://npm-stat.com/charts.html?package=camphora)
+
+[![NPM GRAPH2](https://nodei.co/npm/camphora.png?downloads=true&stars=true)](https://nodei.co/npm/camphora/)
 
 > _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __in-memory caching__, with linear _Aging_.
 
