@@ -1,17 +1,15 @@
 ###Camphora
 
 [![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/camphora#mit-license)
+[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
+[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg)](http://npm-stat.com/charts.html?package=camphora)
 
 [![NPM VERSION](http://img.shields.io/npm/v/camphora.svg)](https://www.npmjs.org/package/camphora)
 [![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg)](http://travis-ci.org/rootslab/camphora)
 [![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora)
+[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora#info=devDependencies)
 
 [![NPM GRAPH1](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
-
-[![GITHUB tag](http://img.shields.io/github/tag/rootslab/camphora.svg)](https://github.com/rootslab/camphora/tags)
-[![ISSUES](http://img.shields.io/github/issues/rootslab/camphora.svg)](https://github.com/rootslab/camphora/issues)
-[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
-[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg)](http://npm-stat.com/charts.html?package=camphora)
 
 [![NPM GRAPH2](https://nodei.co/npm/camphora.png?downloads=true&stars=true)](https://nodei.co/npm/camphora/)
 
