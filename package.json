@@ -1,6 +1,6 @@
 {
   "name": "camphora",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "description": "Camphora, a tiny module for NFU (Not Frequently Used) in-memory caching, with linear Aging.",
   "homepage": "https://github.com/rootslab/camphora",
   "private": false,
