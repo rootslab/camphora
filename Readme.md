@@ -1,13 +1,16 @@
 ###Camphora
 
-[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/camphora#mit-license)
-[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
-[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg)](http://npm-stat.com/charts.html?package=camphora)
+[![CODECLIMATE](http://img.shields.io/codeclimate/github/rootslab/camphora.svg?style=flat)](https://codeclimate.com/github/rootslab/camphora)
+[![CODECLIMATE-TEST-COVERAGE](http://img.shields.io/codeclimate/coverage/github/rootslab/camphora.svg?style=flat)](https://codeclimate.com/github/rootslab/camphora)
 
-[![NPM VERSION](http://img.shields.io/npm/v/camphora.svg)](https://www.npmjs.org/package/camphora)
-[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg)](http://travis-ci.org/rootslab/camphora)
-[![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora)
-[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora#info=devDependencies)
+[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/rootslab/camphora#mit-license)
+[![GITTIP](http://img.shields.io/gittip/rootslab.svg?style=flat)](https://www.gittip.com/rootslab/)
+[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg?style=flat)](http://npm-stat.com/charts.html?package=camphora)
+
+[![NPM VERSION](http://img.shields.io/npm/v/camphora.svg?style=flat)](https://www.npmjs.org/package/camphora)
+[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg?style=flat)](http://travis-ci.org/rootslab/camphora)
+[![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg?style=flat)](https://david-dm.org/rootslab/camphora)
+[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/camphora.svg?style=flat)](https://david-dm.org/rootslab/camphora#info=devDependencies)
 
 [![NPM GRAPH1](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
 
