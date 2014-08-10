@@ -26,6 +26,9 @@ for ( ; r < entries.length; ++r ) {
 log( '- size should be:', util.inspect( [ 4, 0 ], false, 3, true ) );
 assert.ok( cache.size(), [ 4, 0 ] );
 
+log( '- check #keys result, it should be:', util.inspect( Object.keys( cache.cache ), false, 3, true ) );
+assert.deepEqual( cache.keys(), Object.keys( cache.cache ), 'worng #kwys result, got: ' + util.inspect( cache.keys(), false, 3, true ) );
+
 log( '- #clear the cache.' );
 r = cache.clear();
 

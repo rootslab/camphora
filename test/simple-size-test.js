@@ -19,7 +19,7 @@ var log = console.log
 
 log( '- created Camphora cache with default options:\n', util.inspect( cache.options, false, 3, true ) );
 
-log( '- update %d keys with some dummy data:\n', entries.length, util.inspect( entries, false, 3, true ) );
+log( '- update %d keys with some dummy data (buffers):\n', entries.length, util.inspect( entries, false, 3, true ) );
 
 for ( ; r < entries.length; ++r ) {
     s = Math.pow( 2, r + 1 );
