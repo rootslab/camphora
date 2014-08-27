@@ -14,7 +14,7 @@
 
 [![NPM GRAPH1](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
 
-[![NPM GRAPH2](https://nodei.co/npm/camphora.png?downloads=true&stars=true)](https://nodei.co/npm/camphora/)
+[![NPM GRAPH2](https://nodei.co/npm/camphora.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/camphora/)
 
 > _**Camphora**_, a tiny module for __NFU__ _(Not Frequently Used)_ __in-memory caching__, with linear _Aging_.
 
@@ -289,3 +289,5 @@ Camphora#keys = function () : Array
 > CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 > TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 > SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[![GA](https://ga-beacon.appspot.com/UA-53998692-1/camphora/Readme?pixel)](https://github.com/igrigorik/ga-beacon)

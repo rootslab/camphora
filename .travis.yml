@@ -3,10 +3,10 @@ node_js:
   - "0.11"
   - "0.10"
 before_script: 
- - npm install -g istanbul
  - npm install -g codeclimate-test-reporter
+ - npm install -g istanbul
 script: istanbul cover -v test/run.js 
 after_script:
  - codeclimate < coverage/lcov.info
 env: 
- - CODECLIMATE_REPO_TOKEN=bad5a70acb3dac384d5e0544aa1d0efda53905712e40bc30d610fb26e4c4128e 
+ - CODECLIMATE_REPO_TOKEN=bad5a70acb3dac384d5e0544aa1d0efda53905712e40bc30d610fb26e4c4128e
