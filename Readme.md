@@ -1,16 +1,19 @@
 ###Camphora
 
-[![CODECLIMATE](http://img.shields.io/codeclimate/github/rootslab/camphora.svg?style=flat)](https://codeclimate.com/github/rootslab/camphora)
-[![CODECLIMATE-TEST-COVERAGE](http://img.shields.io/codeclimate/coverage/github/rootslab/camphora.svg?style=flat)](https://codeclimate.com/github/rootslab/camphora)
+[![NPM VERSION](http://img.shields.io/npm/v/camphora.svg)](https://www.npmjs.org/package/camphora)
+[![CODACY BADGE](https://img.shields.io/codacy/b18ed7d95b0a4707a0ff7b88b30d3def.svg)](https://www.codacy.com/public/44gatti/camphora)
+[![CODECLIMATE-TEST-COVERAGE](https://codeclimate.com/github/rootslab/camphora/badges/coverage.svg)](https://codeclimate.com/github/rootslab/camphora)
+[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/camphora#mit-license)
 
-[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/rootslab/camphora#mit-license)
-[![GITTIP](http://img.shields.io/gittip/rootslab.svg?style=flat)](https://www.gittip.com/rootslab/)
-[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg?style=flat)](http://npm-stat.com/charts.html?package=camphora)
+[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg)](http://travis-ci.org/rootslab/camphora)
+[![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora)
+[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/camphora.svg)](https://david-dm.org/rootslab/camphora#info=devDependencies)
 
-[![NPM VERSION](http://img.shields.io/npm/v/camphora.svg?style=flat)](https://www.npmjs.org/package/camphora)
-[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/camphora.svg?style=flat)](http://travis-ci.org/rootslab/camphora)
-[![BUILD STATUS](http://img.shields.io/david/rootslab/camphora.svg?style=flat)](https://david-dm.org/rootslab/camphora)
-[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/camphora.svg?style=flat)](https://david-dm.org/rootslab/camphora#info=devDependencies)
+[![status](https://sourcegraph.com/api/repos/github.com/rootslab/camphora/.badges/status.png)](https://sourcegraph.com/github.com/rootslab/camphora)
+[![views](https://sourcegraph.com/api/repos/github.com/rootslab/camphora/.counters/views.png)](https://sourcegraph.com/github.com/rootslab/camphora)
+[![views 24h](https://sourcegraph.com/api/repos/github.com/rootslab/camphora/.counters/views-24h.png)](https://sourcegraph.com/github.com/rootslab/camphora)
+[![NPM DOWNLOADS](http://img.shields.io/npm/dm/camphora.svg)](http://npm-stat.com/charts.html?package=camphora)
+[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
 
 [![NPM GRAPH1](https://nodei.co/npm-dl/camphora.png)](https://nodei.co/npm/camphora/)
 
