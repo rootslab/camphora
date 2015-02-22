@@ -1,42 +1,43 @@
 {
-  "name": "camphora",
-  "version": "0.15.5",
-  "description": "Camphora, a tiny module for NFU (Not Frequently Used) in-memory caching, with linear Aging.",
-  "homepage": "https://github.com/rootslab/camphora",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/rootslab/camphora.git"
-  },
-  "keywords": [
-    "camphora",
-    "cache",
-    "not frequently used",
-    "NFU",
-    "aging",
-    "caching",
-    "in-memory cache",
-    "in-memory file caching",
-    "util"
-  ],
-  "author": {
-    "name": "Guglielmo Ferri",
-    "email": "44gatti@gmail.com"
-  },
-  "dependencies": {
+  "name": "camphora"
+  , "version": "0.15.6"
+  , "description": "Camphora a tiny module for NFU (Not Frequently Used) in-memory caching with linear Aging."
+  , "homepage": "https://github.com/rootslab/camphora"
+  , "private": false
+  , "repository": {
+    "type": "git"
+    , "url": "git://github.com/rootslab/camphora.git"
+  }
+  , "keywords": [
+    "camphora"
+    , "cache"
+    , "not frequently used"
+    , "NFU"
+    , "aging"
+    , "caching"
+    , "in-memory cache"
+    , "in-memory file caching"
+    , "util"
+  ]
+  , "author": {
+    "name": "Guglielmo Ferri"
+    , "email": "44gatti@gmail.com"
+  }
+  ,"dependencies": {
     "bolgia" : ">=2.7.4"
-    },
-  "devDependencies": {},
-  "main": "index",
-  "engines": {
+  }
+  , "devDependencies": {
+  }
+  , "main": "index"
+  , "engines": {
     "node": ">=0.10.x"
-  },
-  "scripts": {
+  }
+  , "scripts": {
     "test": "bash test/run.sh"
-  },
-  "license": "MIT",
-  "readmeFilename": "Readme.md",
-  "bugs": {
+  }
+  , "license": "MIT"
+  , "readmeFilename": "Readme.md"
+  , "bugs": {
     "url": "https://github.com/rootslab/camphora/issues"
   }
 }

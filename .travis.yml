@@ -1,3 +1,4 @@
+sudo: false
 language: node_js
 node_js:
   - "0.11"
@@ -8,5 +9,9 @@ before_script:
 script: istanbul cover -v test/run.js 
 after_script:
  - codeclimate < coverage/lcov.info
-env: 
- - CODECLIMATE_REPO_TOKEN=bad5a70acb3dac384d5e0544aa1d0efda53905712e40bc30d610fb26e4c4128e
+addons:
+ code_climate:
+  repo_token: bad5a70acb3dac384d5e0544aa1d0efda53905712e40bc30d610fb26e4c4128e
+matrix:
+ allow_failures:
+  - node_js: "0.11"
